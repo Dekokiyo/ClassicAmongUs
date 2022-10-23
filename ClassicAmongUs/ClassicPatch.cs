@@ -1,5 +1,7 @@
 using UnityEngine;
 using HarmonyLib;
+using UltimateMods.Modules;
+using static UltimateMods.ClassicAmongUs.ClassicAnimationPatch;
 
 namespace UltimateMods.ClassicAmongUs
 {
@@ -86,7 +88,7 @@ namespace UltimateMods.ClassicAmongUs
                     PushButton.SetActive(true);
 
                     renderer = ClassicAnimation.AddComponent<SpriteRenderer>();
-                    renderer.sprite = Helpers.LoadSpriteFromResources("UltimateMods.Resources.ClassicAmongUs.EmergencyMeeting.Animation0.png", 115f);
+                    renderer.sprite = AssetLoader.ClassicMeetingStart0;
                     AnimNum = 1;
                 }
             }
@@ -95,7 +97,7 @@ namespace UltimateMods.ClassicAmongUs
             {
                 if (renderer != null)
                 {
-                    renderer.sprite = Helpers.LoadSpriteFromResources("UltimateMods.Resources.ClassicAmongUs.EmergencyMeeting.Animation1.png", 115f);
+                    renderer.sprite = AssetLoader.ClassicMeetingStart1;
                     Timer = 0.1f;
                     AnimNum++;
                 }
@@ -105,7 +107,7 @@ namespace UltimateMods.ClassicAmongUs
             {
                 if (renderer != null)
                 {
-                    renderer.sprite = Helpers.LoadSpriteFromResources("UltimateMods.Resources.ClassicAmongUs.EmergencyMeeting.Animation2.png", 115f);
+                    renderer.sprite = AssetLoader.ClassicMeetingStart2;
                     Timer = 0.1f;
                     AnimNum++;
                 }
@@ -115,7 +117,7 @@ namespace UltimateMods.ClassicAmongUs
             {
                 if (renderer != null)
                 {
-                    renderer.sprite = Helpers.LoadSpriteFromResources("UltimateMods.Resources.ClassicAmongUs.EmergencyMeeting.Animation3.png", 115f);
+                    renderer.sprite = AssetLoader.ClassicMeetingStart3;
 
                     renderer2 = PushButton.AddComponent<SpriteRenderer>();
                     if (IsDeadReport == true)
@@ -124,7 +126,7 @@ namespace UltimateMods.ClassicAmongUs
                     }
                     else
                     {
-                        renderer2.sprite = Helpers.LoadSpriteFromResources($"UltimateMods.Resources.ClassicAmongUs.EmergencyMeeting.PushButton{ModTranslation.lang}.png", 115f);
+                        // renderer2.sprite = Helpers.LoadSpriteFromResources($"UltimateMods.Resources.ClassicAmongUs.EmergencyMeeting.PushButton{ModTranslation.lang}.png", 115f);
                     }
                     Timer = 2.2f;
                     AnimNum = 0;

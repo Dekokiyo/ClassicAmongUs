@@ -1,5 +1,6 @@
 using UnityEngine;
 using HarmonyLib;
+using static UltimateMods.ClassicAmongUs.ClassicAmongUs.ClassicMeetingStart;
 
 namespace UltimateMods.ClassicAmongUs
 {
